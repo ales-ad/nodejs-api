@@ -2,7 +2,7 @@ class TestService {
     constructor() {}
 
     static async create() {
-        return "Hello World";
+        return 'Hello World';
     }
 }
 
