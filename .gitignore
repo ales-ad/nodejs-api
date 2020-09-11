@@ -1,0 +1,17 @@
+
+# Dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+/.vscode
+
+# Misc
+*.log
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Don't allow checking in the environment
+.env
