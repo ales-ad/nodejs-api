@@ -1,7 +1,7 @@
 
 # Dependencies
 /node_modules
-
+/zeromq.node
 # IDEs and editors
 /.idea
 /.vscode

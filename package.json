@@ -1,21 +1,29 @@
 {
-  "name": "nodejs-api",
+  "name": "henyep-trading-api",
   "version": "1.0.0",
-  "description": "A Node.js RESTfull API",
-  "main": "index.js",
+  "description": "",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon src/server.js"
   },
-  "author": "DevAl",
-  "license": "MITC",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "nodemon": "^2.0.4",
-    "socket.io": "^2.3.0"
+    "express-jwt": "^6.0.0",
+    "fs": "0.0.1-security",
+    "google-protobuf": "^3.13.0",
+    "http": "0.0.1-security",
+    "jsonschema": "^1.2.6",
+    "pg": "^8.3.3",
+    "socket.io": "^2.3.0",
+    "socketio-jwt-auth": "^0.1.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "tslint": "^6.1.3"
+  }
 }

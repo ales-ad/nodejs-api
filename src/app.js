@@ -1,5 +1,9 @@
+const fs = require('fs');
 const express = require('express');
+const expressJwt = require('express-jwt');
 const bodyParser = require('body-parser');
+
+const config = require('./config');
 const rootRouter = require('./routes');
 const allowCrossDomain = require('./middlewares/allowCrossDomain');
 
@@ -8,5 +12,31 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(allowCrossDomain);
+
+const publicKey = fs.readFileSync(config.jwt.secret, 'utf8');
+app.use(
+    expressJwt({
+        secret: publicKey,
+        algorithms: ['RS256'],
+    })
+);
+
+app.use(function (err, req, res, next) {
+    if (err.name === 'UnauthorizedError') {
+        res.status(err.status).send({ message: err.message });
+        return;
+    }
+    next();
+});
+
 app.use(rootRouter);
+
+app.listen(config.http.port, config.http.host, () => {
+    console.info(
+        'HTTP server is running: http://%s:%s',
+        config.http.host,
+        config.http.port
+    );
+});
+
 module.exports = app;
