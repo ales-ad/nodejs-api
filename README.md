@@ -1,7 +1,6 @@
 # Project installation
 
-1. git clone
-   https://github.com/JustinTulloss/zeromq.node.gitJustinTulloss/zeromq.nodehttps://github.com
+1. git clone https://github.com/JustinTulloss/zeromq.node.git
 2. Install npm dependencies
 3. configure .env
 4. run `npm start`
