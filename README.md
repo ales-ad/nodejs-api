@@ -10,6 +10,6 @@
 
 API: <br> GET `/api/deals` <br> GET `/api/deals/:id` <br> GET `/api/symbols`
 
-SOCKET clinet example:
+SOCKET client example:
 
 `let socket2 = io("127.0.0.1:1111",{ path:"/data", query: 'auth_token='+your_jwt })`
