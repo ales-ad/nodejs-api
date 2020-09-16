@@ -51,5 +51,5 @@ exports.schemaOrderModify = {
         symbol: { type: 'string' },
         comment: { type: 'string', maxLength: 32 },
     },
-    required: ['request_id', 'order_id'],
+    required: ['request_id', 'symbol'],
 };

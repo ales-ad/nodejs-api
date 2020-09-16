@@ -28,10 +28,3 @@ var ser = function (query) {
 };
 
 exports.QueryDB = ser;
-
-/* TEST
-  return resolve([
-        { Deal: "88", Login: "99" },
-        { Deal: "333", Login: "22" },
-      ]);
- */
