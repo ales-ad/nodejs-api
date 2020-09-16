@@ -11,4 +11,4 @@ API: <br> GET `/api/deals` <br> GET `/api/deals/:id` <br> GET `/api/symbols`
 
 SOCKET client example:
 
-`const socket2 = openSocket('127.0.0.1:1000"', { path:"/data", transportOptions: { polling: { extraHeaders: { "Authorization": 'Bearer YOUR_JWT_TOKEN'} } }, });`
+`const socket2 = io('127.0.0.1:1000"', { path:"/data", transportOptions: { polling: { extraHeaders: { "Authorization": 'Bearer YOUR_JWT_TOKEN'} } }, });`
