@@ -92,6 +92,13 @@ io.sockets.on('connect', (socket) => {
 
     socket.on(constants.REQ_ORDER_CREATE, (data) => {
         if (utils.IsValid(data, Schemas.schemaOrderMassStatus)) {
+            logger.info(
+                constants.REQ_ORDER_CREATE +
+                    ' - ' +
+                    JSON.stringify(data) +
+                    ' account - ' +
+                    account
+            );
             let wrapper = new messages.RequestWrapper();
             let request = new messages.OrderMassStatusRequest();
 
