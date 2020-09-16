@@ -31,12 +31,4 @@ app.use(function (err, req, res, next) {
 
 app.use(rootRouter);
 
-app.listen(config.http.port, config.http.host, () => {
-    console.info(
-        'HTTP server is running: http://%s:%s',
-        config.http.host,
-        config.http.port
-    );
-});
-
 module.exports = app;
