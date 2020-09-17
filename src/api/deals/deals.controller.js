@@ -1,6 +1,6 @@
 const DealsService = require('./deals.service');
 const utils = require('../../utils');
-
+const constants = require('../../core/constants');
 let Schema = require('../../core/validatorSchema').schemaDeals;
 
 exports.getFilter = async (req, res) => {
@@ -14,7 +14,7 @@ exports.getFilter = async (req, res) => {
     } else {
         res.status(400).send({
             error: 1001,
-            messages: 'Incorrect data format',
+            messages: constants.ERROR_DATA,
         });
     }
 };
@@ -29,7 +29,7 @@ exports.getOne = async (req, res) => {
     } else {
         res.status(400).send({
             error: 1001,
-            messages: 'Incorrect data format',
+            messages: constants.ERROR_DATA,
         });
     }
 };
