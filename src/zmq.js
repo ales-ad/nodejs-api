@@ -1,4 +1,4 @@
-const zeromq = require('../zeromq.node');
+const zeromq = require('zeromq.node');
 let logger = require('./utils/logger');
 
 const config = require('./config');
